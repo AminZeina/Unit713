@@ -29,6 +29,7 @@ function scene:show( event )
     local phase = event.phase
  
     if ( phase == "will" ) then
+
         local theGround = display.newImage( "./assets/sprites/land.png" )
 		theGround.x = display.contentCenterX - 600
 		theGround.y = display.contentHeight
@@ -48,7 +49,17 @@ function scene:show( event )
 		    bounce = 0.3 
 		    } )
 		sceneGroup:insert( theGround2 )
-		
+
+	 local fire = display.newImage( "./assets/sprites/fire.png" )
+	 fire.x = 1000
+	 fire.y = 200
+	 fire.id = "fire"
+	 physics.addBody( fire, "dynamic", {
+	 	friction = 0.5,
+	 	density = 3.0, 
+	 	bounce = 0.3
+	 	} )
+	 sceneGroup:insert( fire )
 	 
     elseif ( phase == "did" ) then
         -- Code here runs when the scene is entirely on screen

@@ -17,7 +17,7 @@ function onButtonClicked( event )
         time = 750
     }
 
-    composer.gotoscene( "gameScene", options )
+    composer.gotoScene( "gameScene", options )
 end
 
 -- create()
