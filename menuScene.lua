@@ -39,11 +39,16 @@ function scene:show( event )
         sceneText:setFillColor( 0, 0, 1 )
         sceneGroup:insert( sceneText )
         
-        local button = display.newRect( display.contentCenterX,display.contentCenterY, 200, 100 )
+        local button = display.newRect( display.contentCenterX, display.contentCenterY, 400, 200 )
         button:setFillColor( 1, 0, 0 )
         sceneGroup:insert( button )
 
+        local clickText = display.newText( "Play Game!", display.contentCenterX, display.contentCenterY, native.systemFont, 64 )
+        clickText:setFillColor( 0, 0, 0 )
+        sceneGroup:insert( clickText )
+
         button:addEventListener( "touch", onButtonClicked )
+        
     elseif ( phase == "did" ) then
 
         

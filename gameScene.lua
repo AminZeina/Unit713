@@ -50,16 +50,16 @@ function scene:show( event )
 		    } )
 		sceneGroup:insert( theGround2 )
 
-	 local fire = display.newImage( "./assets/sprites/fire.png" )
-	 fire.x = 1000
-	 fire.y = 200
-	 fire.id = "fire"
-	 physics.addBody( fire, "dynamic", {
+	 local ninjaGirl = display.newImage( "./assets/sprites/ninjaGirl.png" )
+	 ninjaGirl.x = 1000
+	 ninjaGirl.y = 200
+	 ninjaGirl.id = "ninjaGirl"
+	 physics.addBody( ninjaGirl, "dynamic", {
 	 	friction = 0.5,
 	 	density = 3.0, 
 	 	bounce = 0.3
 	 	} )
-	 sceneGroup:insert( fire )
+	 sceneGroup:insert( ninjaGirl )
 	 
     elseif ( phase == "did" ) then
         -- Code here runs when the scene is entirely on screen
